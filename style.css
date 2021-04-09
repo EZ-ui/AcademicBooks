@@ -9,6 +9,17 @@
  }
  .navbar-brand {
     transform: translateX(180%);
+    animation: slide 1s;
+ }
+ @keyframes slide {
+    0% {
+       transform: translateX(-100%);
+       opacity: 0;
+    }
+    100% {
+       transform: translateX(180%);
+       opacity: 1;
+    }
  }
  .container1 img {
     border: 1px solid black;
@@ -17,6 +28,7 @@
     transform: translateX(50%);
    position: relative;
    top: 20px;
+   filter: drop-shadow(0px 1px 3px black);
    }
    .container1  {
       border:1px solid black;
@@ -27,6 +39,17 @@
       border-radius: 50px;
       height: 350px;
       transition: ease-in-out 0.4s;
+      animation: drop 0.8s ease;
+   }
+   @keyframes drop {
+      0% {
+         transform: translateY(-50%);
+         opacity: 0;
+      }
+      100% {
+         transform: translateY(0%);
+         opacity: 1;
+      }
    }
    .container1 h3 {
       text-align: center;
